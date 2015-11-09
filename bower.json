@@ -1,0 +1,28 @@
+{
+  "name": "angulartics-daum-clix-retargeting",
+  "version": "0.1.0",
+  "homepage": "https://github.com/mooyoul/angulartics-daum-clix-retargeting",
+  "authors": [
+    "Moo Yeol, Lee (Prescott) <mooyoul@gmail.com>"
+  ],
+  "description": "Daum Clix Remarketing plugin for Angulartics",
+  "main": "./dist/angulartics-daum-clix-retargeting.min.js",
+  "keywords": [
+    "angularjs",
+    "angulartics",
+    "analytics",
+    "daum",
+    "clix",
+    "remarketing",
+    "daum-clix-retargeting",
+    "angulartics-plugin"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

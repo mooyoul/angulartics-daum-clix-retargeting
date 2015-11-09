@@ -1,0 +1,37 @@
+{
+  "name": "angulartics-daum-clix-retargeting",
+  "version": "0.1.0",
+  "description": "Daum Clix Remarketing plugin for Angulartics",
+  "main": "./lib/index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "build": "mkdir -p dist && node_modules/.bin/uglifyjs lib/angulartics-daum-clix-retargeting.js --compress --source-map dist/angulartics-daum-clix-retargeting.min.js.map --source-map-root .. --source-map-url ../dist/angulartics-daum-clix-retargeting.min.js.map -o dist/angulartics-daum-clix-retargeting.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mooyoul/angulartics-daum-clix-retargeting.git"
+  },
+  "keywords": [
+    "angularjs",
+    "angulartics",
+    "analytics",
+    "daum",
+    "clix",
+    "remarketing",
+    "daum-clix-retargeting",
+    "angulartics-plugin"
+  ],
+  "author": "Moo Yeol, Lee (Prescott) <mooyoul@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mooyoul/angulartics-daum-clix-retargeting/issues"
+  },
+  "homepage": "https://github.com/mooyoul/angulartics-daum-clix-retargeting#readme",
+  "devDependencies": {
+    "uglify-js": "^2.4.24"
+  },
+  "dependencies": {
+    "angulartics": "^0.20.0"
+  }
+}

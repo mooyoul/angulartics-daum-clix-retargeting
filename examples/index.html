@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8">
+    <title>Google Adwords Remarketing Tag sample | Angulartics</title>
+    <link rel="stylesheet" href="//bootswatch.com/cosmo/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+    <script src="/node_modules/angulartics/dist/angulartics.min.js"></script>
+    <script src="/dist/angulartics-daum-clix-retargeting.min.js"></script>
+    <script type="text/javascript">
+        var roosevelt_params = {
+            retargeting_id:'NTubVj7i5Pe2XCY-e8-G6Q00',
+            tag_label:'g4dlUA3IRFSvJFk8Ad2Pkw'
+        };
+    </script>
+</head>
+<body ng-app="sample">
+
+<div class="navbar navbar-default">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#/">My App</a>
+    </div>
+    <div>
+        <ul class="nav navbar-nav">
+            <li><a href="#/a">Page A</a></li>
+            <li><a href="#/b">Page B</a></li>
+            <li><a href="#/c">Page C</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div ng-view></div>
+    <hr>
+
+    <p class="alert alert-success">
+        Open the network inspector in your browser, click any of the nav options and you'll see the analytics
+        request being executed. Then check <a class="alert-link" href="https://clix.biz.daum.net/retargeting/retargetingList.do" target="_blank">your Retargeting page in Daum Clix</a>.
+    </p>
+</div>
+
+<script>
+    angular.module('sample', ['angulartics', 'angulartics.daum.clix.retargeting'])
+            .config(function ($routeProvider, $analyticsProvider) {
+                $routeProvider
+                        .when('/',  { template: '<h1>Root Page</h1>', controller: 'SampleCtrl' })
+                        .when('/a', { template: '<h1>Page "A"</h1>',  controller: 'SampleCtrl' })
+                        .when('/b', { template: '<h1>Page "B"</h1>',  controller: 'SampleCtrl' })
+                        .when('/c', { template: '<h1>Page "C"</h1>',  controller: 'SampleCtrl' })
+                        .otherwise({ redirectTo: '/' });
+            })
+            .controller('SampleCtrl', function () {});
+</script>
+</body>
+</html>
